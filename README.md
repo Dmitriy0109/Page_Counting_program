@@ -15,7 +15,8 @@
 В теле запроса необходимо передать JSON в виде:
 ![Снимок](https://github.com/Dmitriy0109/Page_Counting_program/assets/91308980/6dddf6bd-57cf-4b9b-acd2-199e199dd62b)
 После чего ожидаем ответ:
-![Снимок2](https://github.com/Dmitriy0109/Page_Counting_program/assets/91308980/12ec8dce-5971-44e7-b8bc-ae2688b4f045)
+![Снимок2](https://github.com/Dmitriy0109/Page_Counting_program/assets/91308980/b03c27ac-ff59-42da-b895-823cf33ee134)
+
 
     Для того, чтобы добавить новый необходимый формат файлов необходимо:
     1.Добавить зависимость в pom.xml
