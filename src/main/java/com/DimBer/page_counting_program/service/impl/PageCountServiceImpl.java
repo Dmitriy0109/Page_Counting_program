@@ -18,18 +18,20 @@ public class PageCountServiceImpl implements PageCountService {
     private final Set<PageCounter> pageCounter;
 
 
-    private FileCountService fileCountService;
+    private FileCountService countService;
     @Autowired
     public PageCountServiceImpl(@Qualifier("PageCounter") Set<PageCounter>pageCounter, FileCountService fileCountService){
         this.pageCounter=pageCounter;
-        this.fileCountService=fileCountService;
+        this.countService =fileCountService;
     }
 
     public OutputDataDTO document(InputDataDTO inputDataDTO) {
-        if (inputDataDTO.getPath()==null) throw new RuntimeException("Некоректный путь");
-        if (inputDataDTO.getTypes()==null) throw new RuntimeException("Укажите тип");
+        if (inputDataDTO.getPath()==null) throw new RuntimeException("Путь пуст");
+        if (inputDataDTO.getTypes()==null|| inputDataDTO.getTypes().length==0){
+            throw new RuntimeException("Укажите тип");
+        }
         int sumOfPages=0;
-        List<File> files=fileCountService.listOfFiles(new File(inputDataDTO.getPath()),inputDataDTO.getTypes());
+        List<File> files= countService.listOfFiles(new File(inputDataDTO.getPath()),inputDataDTO.getTypes());
         for (File file:files){
             for (PageCounter page:pageCounter){
                 sumOfPages+=page.getPagesCont(file);
