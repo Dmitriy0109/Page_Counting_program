@@ -4,5 +4,5 @@ import java.io.File;
 
 public interface PageCounter {
 
-     int getPagesCont(File file);
+    int getPagesCont(File file);
 }

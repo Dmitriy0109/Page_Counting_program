@@ -2,6 +2,7 @@ package com.DimBer.page_counting_program.service.impl;
 
 import com.DimBer.page_counting_program.service.FileCountService;
 import org.springframework.stereotype.Service;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +32,6 @@ public class FileCountServiceImpl implements FileCountService {
                     }
                 }
             }
-        }else throw new RuntimeException("Путь не верен");
+        } else throw new RuntimeException("Путь не верен");
     }
 }

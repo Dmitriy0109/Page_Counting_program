@@ -2,7 +2,7 @@ package com.DimBer.page_counting_program.dto;
 
 public class InputDataDTO {
     private String path;
-    private String [] types;
+    private String[] types;
 
     public String getPath() {
         return path;

@@ -1,7 +1,6 @@
 package com.DimBer.page_counting_program.dto;
 
 
-
 public class OutputDataDTO {
     private long documents;
     private long pages;
@@ -22,8 +21,8 @@ public class OutputDataDTO {
         this.pages = pages;
     }
 
-    public OutputDataDTO(long documents,long pages) {
-        this.documents=documents;
+    public OutputDataDTO(long documents, long pages) {
+        this.documents = documents;
         this.pages = pages;
 
 

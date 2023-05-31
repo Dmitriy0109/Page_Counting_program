@@ -21,7 +21,7 @@ public class DocxCounter implements PageCounter {
         if (file.getName().endsWith(".docx")) {
             try (XWPFDocument doc = new XWPFDocument(new FileInputStream(file))) {
                 XWPFWordExtractor extractor = new XWPFWordExtractor(doc);
-                pageCount= extractor.getExtendedProperties().getPages();
+                pageCount = extractor.getExtendedProperties().getPages();
             } catch (Exception e) {
                 return 1;
             }
