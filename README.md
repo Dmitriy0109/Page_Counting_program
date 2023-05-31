@@ -14,7 +14,7 @@
 Далее отпрвляем POST-запрос по адресу "localhost:8090/api/getDocuments"
 В теле запроса необходимо передать JSON в виде:
 ![Снимок](https://github.com/Dmitriy0109/Page_Counting_program/assets/91308980/6dddf6bd-57cf-4b9b-acd2-199e199dd62b)
-После чего ожидаем ответ:
+ После чего ожидаем ответ:
 ![Снимок2](https://github.com/Dmitriy0109/Page_Counting_program/assets/91308980/b03c27ac-ff59-42da-b895-823cf33ee134)
 
 
