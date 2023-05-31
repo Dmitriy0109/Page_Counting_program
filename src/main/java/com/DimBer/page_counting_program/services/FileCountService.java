@@ -1,4 +1,4 @@
-package com.DimBer.page_counting_program.service;
+package com.DimBer.page_counting_program.services;
 
 import java.io.File;
 import java.util.List;

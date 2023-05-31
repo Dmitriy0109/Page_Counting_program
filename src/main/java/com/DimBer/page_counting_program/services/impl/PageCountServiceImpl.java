@@ -1,10 +1,10 @@
-package com.DimBer.page_counting_program.service.impl;
+package com.DimBer.page_counting_program.services.impl;
 
-import com.DimBer.page_counting_program.counter.PageCounter;
+import com.DimBer.page_counting_program.counters.PageCounter;
 import com.DimBer.page_counting_program.dto.InputDataDTO;
 import com.DimBer.page_counting_program.dto.OutputDataDTO;
-import com.DimBer.page_counting_program.service.FileCountService;
-import com.DimBer.page_counting_program.service.PageCountService;
+import com.DimBer.page_counting_program.services.FileCountService;
+import com.DimBer.page_counting_program.services.PageCountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -27,7 +27,7 @@ public class PageCountServiceImpl implements PageCountService {
         this.countService = fileCountService;
     }
 
-    public OutputDataDTO document(InputDataDTO inputDataDTO) {
+    public OutputDataDTO searchDocuments(InputDataDTO inputDataDTO) {
         if (inputDataDTO.getPath() == null) throw new RuntimeException("Путь пуст");
         if (inputDataDTO.getTypes() == null || inputDataDTO.getTypes().length == 0) {
             throw new RuntimeException("Укажите тип");

@@ -2,14 +2,10 @@ package com.DimBer.page_counting_program.controllers;
 
 import com.DimBer.page_counting_program.dto.InputDataDTO;
 import com.DimBer.page_counting_program.dto.OutputDataDTO;
-import com.DimBer.page_counting_program.service.PageCountService;
+import com.DimBer.page_counting_program.services.PageCountService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatusCode;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
@@ -23,9 +19,10 @@ public class PageCountController {
     }
 
 
-    @PostMapping("/getDocuments")
-    public ResponseEntity<OutputDataDTO> getDocuments(@RequestBody InputDataDTO inputDataDTO) {
+    @PostMapping("/countFileAndPage")
+    @ResponseStatus(HttpStatus.OK)
+    public OutputDataDTO countFileAndPage(@RequestBody InputDataDTO inputDataDTO) {
+        return pageCountService.searchDocuments(inputDataDTO);
 
-        return new ResponseEntity<>(pageCountService.document(inputDataDTO), HttpStatusCode.valueOf(200));
     }
 }

@@ -1,8 +1,8 @@
-package com.DimBer.page_counting_program.service;
+package com.DimBer.page_counting_program.services;
 
 import com.DimBer.page_counting_program.dto.InputDataDTO;
 import com.DimBer.page_counting_program.dto.OutputDataDTO;
 
 public interface PageCountService {
-    OutputDataDTO document(InputDataDTO inputDataDTO);
+    OutputDataDTO searchDocuments(InputDataDTO inputDataDTO);
 }

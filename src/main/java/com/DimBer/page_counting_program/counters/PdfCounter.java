@@ -1,4 +1,4 @@
-package com.DimBer.page_counting_program.counter;
+package com.DimBer.page_counting_program.counters;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.springframework.beans.factory.annotation.Qualifier;

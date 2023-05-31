@@ -1,4 +1,4 @@
-package com.DimBer.page_counting_program.counter;
+package com.DimBer.page_counting_program.counters;
 
 import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 
 @Component
 @Qualifier("PageCounter")

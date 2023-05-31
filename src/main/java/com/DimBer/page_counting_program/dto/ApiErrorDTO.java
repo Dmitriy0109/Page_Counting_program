@@ -1,11 +1,11 @@
 package com.DimBer.page_counting_program.dto;
 
-public class Response {
+public class ApiErrorDTO {
 
 
     private String massage;
 
-    public Response(String massage) {
+    public ApiErrorDTO(String massage) {
         this.massage = massage;
     }
 
